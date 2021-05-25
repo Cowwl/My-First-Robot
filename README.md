@@ -13,6 +13,8 @@ Parts Used:
 6. A breadboard and a breadboard power supply to power the motor driver. _(Can be substituted with a battery)_
 7. A metal frame for the robot and 2 standard rubber wheels.
 8. 2 DC motors, with a max rotation speed of 200rpm.
+# Libraries Used:
+* [AFMotor.h](https://learn.adafruit.com/afmotor-library-reference)
 # Sections of the Code:
 The source code for the robot has been broken down into sections, and here I will explain the logic of each portion.
 ## int dist()
@@ -20,4 +22,5 @@ This function finds out the distance between the obstacle (if within range of th
 For a detailed explanation on how this works, click [here.](https://create.arduino.cc/projecthub/abdularbi17/ultrasonic-sensor-hc-sr04-with-arduino-tutorial-327ff6)  
 ## double temp()
 This function uses the KY-013 Module and gets temperature data from the surroundings. It then returns the value as a floating-point number to loop(). For an in-depth explanation, click [here.](https://arduinomodules.info/ky-013-analog-temperature-sensor-module/)
-
+## void forward()
+This function causes the robot to move forward.
