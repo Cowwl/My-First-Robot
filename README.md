@@ -12,7 +12,7 @@ Parts Used:
 5. Jumper cables and a soldering iron kit.
 6. A breadboard and a breadboard power supply to power the motor driver. _(Can be substituted with a battery)_
 7. A metal frame for the robot and 2 standard rubber wheels.
-8. 2 DC motors, with a max rotation speed of 200rpm.
+8. 2 DC motors, with a max rotation speed of 200 rpm.
 # Libraries Used:
 * [AFMotor.h](https://learn.adafruit.com/afmotor-library-reference)
 # Sections of the Code:
@@ -29,6 +29,12 @@ This function orders the robot to move forward. The code snippet is given below.
    leftm.setSpeed(255);
    rightm.setSpeed(253);
    ```
-   Here, leftm denotes the left wheel, and rightm denotes the right wheel.  
-   You must have noticed an interesting thing - Both the motors have a small offset in their speeds. Apparently,
-   
+Here, leftm denotes the left wheel, and rightm indicates the right wheel.  
+  
+  
+You must have noticed an interesting thing - Both the motors have a slight offset in their speeds.  
+  
+  
+Strangely, setting the same speed values for both motors created unequal torques in both of them, causing the robot to move slightly to the left. Hence, I had to use a lower speed for my right motor.  
+This is however, luck-dependent and you might not need to add this offset.
+## void left()
