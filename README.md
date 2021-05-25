@@ -1,5 +1,5 @@
 # Collision and Heat Avoidance Robot
-My first proper project in Arduino! I made this to learn more about the language and venture deeper into the field of electronics and robotics.  
+My first proper project in Arduino! I made this to learn more about the language and venture deeper into electronics and robotics.  
 I'm still working on it and plan to improve and optimise the code and add new features.
 # Components Used
 I used the following components to make the robot. If you cannot obtain them, use TinkerCAD.  
@@ -16,6 +16,8 @@ Parts Used:
 # Sections of the Code:
 The source code for the robot has been broken down into sections, and here I will explain the logic of each portion.
 ## int dist()
-This function finds out the distance between the obstacle (if within range of the sensor) at any moment in time and sends the data as an integer to the main function, **loop()**.
+This function finds out the distance between the obstacle (if within range of the sensor) at any moment in time. It sends the data as an integer to the main function, **loop()**.
 For a detailed explanation on how this works, click [here.](https://create.arduino.cc/projecthub/abdularbi17/ultrasonic-sensor-hc-sr04-with-arduino-tutorial-327ff6)  
 ## double temp()
+This function uses the KY-013 Module and gets temperature data from the surroundings. It then returns the value as a floating-point number to loop(). For an in-depth explanation, click [here.](https://arduinomodules.info/ky-013-analog-temperature-sensor-module/)
+
