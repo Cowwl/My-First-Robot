@@ -23,4 +23,12 @@ For a detailed explanation on how this works, click [here.](https://create.ardui
 ## double temp()
 This function uses the KY-013 Module and gets temperature data from the surroundings. It then returns the value as a floating-point number to loop(). For an in-depth explanation, click [here.](https://arduinomodules.info/ky-013-analog-temperature-sensor-module/)
 ## void forward()
-This function causes the robot to move forward.
+This function orders the robot to move forward. The code snippet is given below. It uses functions from the AFMotor.h library, so make sure to read the documentation to understand it fully.
+```leftm.run(FORWARD);
+   rightm.run(FORWARD);
+   leftm.setSpeed(255);
+   rightm.setSpeed(253);
+   ```
+   Here, leftm denotes the left wheel, and rightm denotes the right wheel.  
+   You must have noticed an interesting thing - Both the motors have a small offset in their speeds. Apparently,
+   
