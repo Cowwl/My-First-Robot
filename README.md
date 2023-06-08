@@ -1,6 +1,5 @@
 # Collision and Heat Avoidance Robot
 My first proper project in Arduino! I made this to learn more about the language and venture deeper into electronics and robotics.  
-I'm still working on it and plan to improve and optimise the code and add new features.
 # Components Used
 I used the following components to make the robot. If you cannot obtain them, use TinkerCAD.  
 However, I feel learning hands-on is a better approach to learning!  
