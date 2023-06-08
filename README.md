@@ -38,3 +38,13 @@ You must have noticed an interesting thing - Both the motors have a slight offse
 Strangely, setting the same speed values for both motors created unequal torques in both of them, causing the robot to move slightly to the left. Hence, I had to use a lower speed for my right motor.  
 This is however, luck-dependent and you might not need to add this offset.
 ## void left()
+This function orders the robot to turn left when an obstacle is detected. It does this by ordering the left wheel to rotate backward and the right wheel to rotate forward, causing the robot to turn left. It uses functions from the AFMotor.h library, so make sure to read the documentation to understand it fully.
+
+## void stopmot()
+This function stops both the left and right motors, effectively stopping the robot's movement.
+
+## void loop()
+This is the main function that controls the robot's behavior. It first reads the temperature using the temp() function and checks if it is below a certain threshold value. If it is, the robot moves forward using the forward() function if there are no obstacles in front of it. If an obstacle is detected, it turns left using the left() function until the obstacle is no longer detected. If the temperature is above the threshold value, the robot turns left until the temperature goes back below the threshold value. If the program encounters a "goto f" statement, it jumps back to the label "f:", which is located at the beginning of the "if (temp() <= thresh)" block.
+
+# Conclusion
+This code is a simple example of how an Arduino board can be used to build a robot with collision and heat avoidance capabilities. By using the HC-SR04 and KY-013 sensors, the robot is able to detect obstacles and temperature changes in its environment and respond accordingly. The code can be further optimized and improved to add more features and functionality to the robot.
